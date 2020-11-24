@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<objectModel xsi:schemaLocation="http://standards.ieee.org/IEEE1516-2010 http://standards.ieee.org/downloads/1516/1516.2-2010/IEEE1516-DIF-2010.xsd" xmlns="http://standards.ieee.org/IEEE1516-2010" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelIdentification>
+        <name>Chatroom</name>
+        <type>FOM</type>
+        <version>1.0</version>
+        <modificationDate>2011-05-20</modificationDate>
+        <securityClassification>Unclassified</securityClassification>
+        <purpose>Learning</purpose>
+        <applicationDomain>Analysis</applicationDomain>
+        <description>This is a small example FOM that is used for demonstration purposes simulation a chatroom in the Pitch pRTI LE</description>
+        <useLimitation></useLimitation>
+        <other></other>
+    </modelIdentification>  
+    <interactions>
+        <interactionClass>
+            <name>HLAinteractionRoot</name>
+            <interactionClass>
+                <name>Message</name>
+                <sharing>PublishSubscribe</sharing>
+                <dimensions/>
+                <transportation>HLAreliable</transportation>
+                <order>Receive</order>
+                <semantics>Sent message</semantics>
+                <parameter>
+                    <name>Text</name>
+                    <dataType>HLAunicodeString</dataType>
+                    <semantics>Content of the message</semantics>
+                </parameter>
+                <parameter>
+                    <name>Sender</name>
+                    <dataType>HLAunicodeString</dataType>
+                    <semantics>Sender name or id</semantics>
+                </parameter>
+                <parameter>
+                    <name>Chatroom</name>
+                    <dataType>HLAunicodeString</dataType>
+                    <semantics>id of chat</semantics>
+                </parameter>
+            </interactionClass>
+  </interactionClass>
+    </interactions>
+    <time>
+        <timeStamp>
+            <dataType>HLAfloat64Time</dataType>
+            <semantics></semantics>
+        </timeStamp>
+        <lookahead>
+            <dataType>HLAfloat64Time</dataType>
+            <semantics></semantics>
+        </lookahead>
+    </time>
+    <switches>
+        <autoProvide isEnabled="true"/>
+        <conveyRegionDesignatorSets isEnabled="false"/>
+        <conveyProducingFederate isEnabled="false"/>
+        <attributeScopeAdvisory isEnabled="false"/>
+        <attributeRelevanceAdvisory isEnabled="false"/>
+        <objectClassRelevanceAdvisory isEnabled="false"/>
+        <interactionRelevanceAdvisory isEnabled="false"/>
+        <serviceReporting isEnabled="false"/>
+        <exceptionReporting isEnabled="false"/>
+        <delaySubscriptionEvaluation isEnabled="false"/>
+        <automaticResignAction resignAction="CancelThenDeleteThenDivest"/>
+    </switches>
+    <dataTypes>
+        <simpleDataTypes>
+            <simpleData>
+                <name>Message</name>
+                <representation>HLAunicodeString</representation>
+                <units>NA</units>
+                <resolution>NA</resolution>
+                <accuracy>NA</accuracy>
+                <semantics>The message</semantics>
+            </simpleData>
+  </simpleDataTypes>
+    </dataTypes>
+    <notes/>
+</objectModel>

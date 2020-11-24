@@ -21,7 +21,7 @@ public class User extends NullFederateAmbassador {
     private InteractionClassHandle handle;
 
     public User(){
-        formmoduleName = "C:\\Program Files\\PitchVisualOMTFree\\samples\\Chatroom\\Chatroom.xml";
+        formmoduleName = "Chatroom.xml";
 
         federationExecutionName = "chatroom-federation";
         federationType = "User";
